@@ -46,16 +46,19 @@ ul {
     font-family: Arial ;
   }
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Lighter background for the whole page */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    margin-top: 8vh;
-    padding: 0;
+nav a:hover {
+    color: #ddd;
 }
+
+nav a.active {
+    color: #f5a623; /* Different color for the active page */
+}
+
+section {
+    padding: 20px;
+}
+
+  
 
 [data-custom-class='body'] {
     max-width: 1200px; /* You can adjust this width if needed */
@@ -86,6 +89,17 @@ header {
     align-items: center; 
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Lighter background for the whole page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 8vh;
+    padding: 0;
+}
+
 nav {
     text-align: center;
     display: flex;
@@ -103,14 +117,25 @@ nav a {
     font-size: 24px;
 }
 
-nav a:hover {
-    color: #ddd;
-}
-
-nav a.active {
-    color: #f5a623; /* Different color for the active page */
-}
-
-section {
-    padding: 20px;
+/* Mobile View Adjustments */
+@media only screen and (max-width: 768px) {
+    [data-custom-class='body'] {
+        width: 100%;  /* Takes the full width of the mobile viewport */
+        box-shadow: none;  /* Removes shadow */
+    }
+    nav {
+        gap: 0vh;
+        align-items: center;
+    }
+    header {
+        height: 50px;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 20px;
+        font-weight: bold;
+        font-size: 18px;
+    }
 }
