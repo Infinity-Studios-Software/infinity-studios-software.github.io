@@ -215,13 +215,13 @@ a {
 
 @media only screen and (min-width: 2000px) {
     .formButton {
-        height: 80px; /* double the original height */
-        width: 200px; /* double the original width */
+        height: 80px; 
+        width: 200px; 
         font-size: 1.5rem;
     }
     
     a > img {
-        height: 80px; /* double the original height */
+        height: 80px; 
     }
     .buttonRow {
         height: 200px;
@@ -229,9 +229,11 @@ a {
     }
     .buttonColumn {
         gap: 2rem;
+        max-width: 380px;
     }
     #signup span {
         font-size: 1.2rem;
         margin-bottom: -20px;
     }
+
 }
