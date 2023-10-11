@@ -36,14 +36,23 @@ loader.load(
     object.scale.set(10, 10, 10);
     object.position.set(0, 0.3, 0.2);
     scene.add(object);
+     // Hide the loading animation when loading is complete
+     const loadingHint = document.getElementById("loading-animation"); // Change "loading-hint" to "loading-animation"
+     loadingHint.style.display = "none";
   },
   function (xhr) {
     //While it is loading, log the progress
     console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+     // While it is loading, update the progress bar
+    const progressBar = document.querySelector(".progress");
+    progressBar.style.width = (xhr.loaded / xhr.total) * 100 + "%";
+    console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
   },
   function (error) {
     //If there is an error, log it
     console.error(error);
+    const loadingAnimation = document.getElementById("loading-animation");
+    loadingAnimation.style.display = "none";
   }
 );
 
