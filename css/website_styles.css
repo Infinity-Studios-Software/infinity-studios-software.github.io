@@ -1,0 +1,237 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(to bottom right, #359EFF, #012D56 130%);
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    bottom: -40%;
+    left: -60%;
+    width: 80vw;
+    height: 80vw;
+    background: white;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.header {
+    text-align: center;
+    padding-top: 2%; 
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensuring the header takes full width */
+}
+.logo {
+    max-width: 2.8rem;
+    padding-bottom: 10px;
+}
+
+.title {
+    margin-top: 5px;  
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 5px;
+}
+
+#tos {
+    position: absolute;
+    top: 40%; 
+    right: 5%; 
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.content {
+    overflow-y: auto; /* This allows it to be scrollable when content overflows. */
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: row; /* This ensures the child divs are displayed as columns */
+    height: auto;
+    width: 100%;
+}
+
+.left_column {
+    flex-basis: 45%; 
+    /*border: solid 2px  black;*/
+}
+
+.right_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 55%;
+    box-sizing: border-box;
+    align-self: flex-start;
+
+    padding: 70px 170px 70px 0;
+}
+
+.mainText {
+    width: 500px;
+    padding-bottom: 4rem;
+    color: #FFF;
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.30);
+    font-family: Montserrat;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 0.5rem;
+    text-align: left;
+}
+
+
+.featureRow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: baseline;
+    padding-bottom: 7vh;
+}
+
+.feature {
+    padding: 0 2vw 0 0;
+    display: flex;
+    flex-direction: row;
+    align-content: baseline;
+    gap: 1.2rem;
+    align-items: center;
+    
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 3.5px;
+}
+
+.icon {
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem;
+    color: #6B6B6B;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.buttonRow {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.buttonRow :nth-child(2) {
+    font-size: 1rem;
+}
+
+.buttonColumn {
+    box-sizing: border-box;
+    max-width: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
+    align-items: center;
+
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 2.75px;
+    height: 120px;
+}
+
+.buttonColumn#signup {
+    padding-bottom: 5px;
+}
+
+a > img {
+    height: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.formButton {
+    height: 50px;
+    width: 160px;
+    display: flex; /* Use flex to center text both horizontally and vertically */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+    background-color: #0f0f0f;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem; /* Adjust font size if needed */
+    font-weight: 700;
+}
+
+#container3D {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 0;
+    z-index: 4;
+}
+
+@media only screen and (min-width: 2000px) {
+    .formButton {
+        height: 80px; /* double the original height */
+        width: 200px; /* double the original width */
+        font-size: 1.5rem;
+    }
+    
+    a > img {
+        height: 80px; /* double the original height */
+    }
+    .buttonRow {
+        height: 200px;
+        padding-top: 0;
+    }
+    .buttonColumn {
+        gap: 2rem;
+    }
+    #signup span {
+        font-size: 1.2rem;
+        margin-bottom: -20px;
+    }
+}
