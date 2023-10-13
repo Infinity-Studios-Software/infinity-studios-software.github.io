@@ -66,7 +66,7 @@ body:before {
     letter-spacing: 4px;
 }
 
-.content {
+.contentDesktop {
     overflow-y: auto; /* This allows it to be scrollable when content overflows. */
     position: absolute;
     top: 55%;
@@ -76,6 +76,9 @@ body:before {
     flex-direction: row; /* This ensures the child divs are displayed as columns */
     height: auto;
     width: 100%;
+}
+.contentMobile {
+    display: none;
 }
 
 .left_column {
@@ -247,6 +250,11 @@ a {
     font-size: 18px;
   }
 
+  .mobileTextChange::before {
+    content: "";
+    display: none;
+}
+
 @media only screen and (min-width: 2000px) {
     .formButton {
         height: 80px; 
@@ -268,6 +276,82 @@ a {
     #signup span {
         font-size: 1.2rem;
         margin-bottom: -20px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding-top: 5%;
+    }
+
+    #container3D, .contentDesktop, #tos, .logo, body::before {
+        display: none;
+    }
+
+    .contentMobile{
+        display: inline-block;
+        width: 100%;
+    }
+
+    .right_column {
+        padding: 20px 0;  /* Add padding on top and bottom for spacing */
+    }
+
+    .left_column{
+        height: 30vh;
+    }
+
+    .mainText {
+        width: 350px;
+        text-align: center;
+        padding-bottom: 1.5rem;
+        font-size: 1.8rem;
+        margin: auto;
+        text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.20);
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 0.35rem;
+        text-transform: uppercase;
+    }
+
+    .featureRow {
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+    }
+
+    .feature {
+        width: 380px;
+        padding: 10px 0;
+        justify-content: center;
+        text-align: center;
+        margin:auto;
+        justify-content: left;
+    }
+
+    .mobileTextChange {
+        visibility: hidden;
+    }
+
+    .mobileTextChange::before {
+        content: "ANALYZE STATS";
+        display: inline;
+        visibility: visible;
+    }
+
+    .buttonRow {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .buttonColumn {
+        max-width: 100%;  /* Take full width */
+        margin-bottom: 10px;
+    }
+
+    .formButton, a > img {
+        margin: 0 auto;  /* Center align the buttons and images */
     }
 
 }
