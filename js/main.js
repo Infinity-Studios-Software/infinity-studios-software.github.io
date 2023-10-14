@@ -39,45 +39,35 @@
   loader.load(
     `models/${objToRender}/scene.gltf`,
     function (gltf) {
-      //If the file is loaded, add it to the scene
       object = gltf.scene;
       object.rotation.set(-Math.PI/50, Math.PI*1.25, Math.PI/15);
       object.scale.set(10, 10, 10);
       object.position.set(0, 0.3, 0.2);
       scene.add(object);
       // Hide the loading animation when loading is complete
-      const loadingHint = document.getElementById("loading-animation"); // Change "loading-hint" to "loading-animation"
+      const loadingHint = document.getElementById("loading-text"); // Change "loading-hint" to "loading-animation"
       loadingHint.style.display = "none";
     },
     function (xhr) {
       //While it is loading, log the progress
-      console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-      // While it is loading, update the progress bar
-      const progressBar = document.querySelector(".progress");
-      progressBar.style.width = (xhr.loaded / xhr.total) * 100 + "%";
       console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
     },
     function (error) {
-      //If there is an error, log it
       console.error(error);
-      const loadingAnimation = document.getElementById("loading-animation");
+      const loadingAnimation = document.getElementById("loading-text");
       loadingAnimation.style.display = "none";
     }
   );
 
 
-  camera.position.set(-1.4, 0.5, 1.3); // Adjust the camera position
-  camera.lookAt(0, 0, 0); // Look at the origin (0, 0, 0)
+  camera.position.set(-1.4, 0.5, 1.3); 
+  camera.lookAt(0, 0, 0); 
 
-
-  //Instantiate a new renderer and set its size
   const renderer = new THREE.WebGLRenderer({ alpha: true , antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio); // This line is important!
   container = document.getElementById("container3D");
   renderer.setSize(container.clientWidth, container.clientHeight);
 
-
-  //Add the renderer to the DOM
   document.getElementById("container3D").appendChild(renderer.domElement);
 
 
@@ -102,11 +92,11 @@
   const lerpFactor = 0.02;
 
   let time = 0;
-  const amplitudeX = 0.01;  // Maximum angle of oscillation in radians for X-axis
-  const frequencyX = 1;  // Speed of oscillation for X-axis
+  const amplitudeX = 0.01;  
+  const frequencyX = 1; 
 
-  const amplitudeY = 0.06;  // Maximum angle of oscillation in radians for Y-axis
-  const frequencyY = 0.7;  // Speed of oscillation for Y-axis
+  const amplitudeY = 0.06; 
+  const frequencyY = 0.7;  
 
   function animate() {
     requestAnimationFrame(animate);

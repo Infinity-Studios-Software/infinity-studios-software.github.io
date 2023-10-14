@@ -34,7 +34,7 @@ body:before {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%; /* Ensuring the header takes full width */
+    width: 100%; 
 }
 .logo {
     max-width: 2.8rem;
@@ -67,13 +67,13 @@ body:before {
 }
 
 .contentDesktop {
-    overflow-y: auto; /* This allows it to be scrollable when content overflows. */
+    overflow-y: auto; 
     position: absolute;
     top: 55%;
     transform: translateY(-50%);
     z-index: 2;
     display: flex;
-    flex-direction: row; /* This ensures the child divs are displayed as columns */
+    flex-direction: row;
     height: auto;
     width: 100%;
 }
@@ -195,14 +195,14 @@ a {
 .formButton {
     height: 50px;
     width: 160px;
-    display: flex; /* Use flex to center text both horizontally and vertically */
-    align-items: center; /* Vertically center the text */
-    justify-content: center; /* Horizontally center the text */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     background-color: #0f0f0f;
     border-radius: 10px;
     color: white;
     text-decoration: none;
-    font-size: 1rem; /* Adjust font size if needed */
+    font-size: 1rem; 
     font-weight: 700;
 }
 
@@ -213,19 +213,6 @@ a {
     left: 0;
     z-index: 4;
 }
-
-#loading-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-  }
   
   .progress-bar {
     width: 200px;
@@ -243,7 +230,11 @@ a {
   }
   
   #loading-text {
-    margin-top: 10px;
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    top: 30%;
+    z-index: 4;
     color: #fff;
     font-size: 18px;
   }
@@ -274,6 +265,54 @@ a {
 
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+    .logo {
+        max-width: 2rem;
+        max-height: 2rem;
+    }
+    #tos {
+        font-size: 0.8rem;
+    }
+    .title {
+        font-size: 1.1rem;
+    }
+    .right_column{
+        padding-right: 50px;
+        font-size: 0.5rem;
+        max-width: 400px;
+    }
+    .mainText {
+        width: 350px;
+        font-size: 2rem;
+        padding-bottom: 3rem;
+    }
+    .featureRow{
+
+    }
+    .feature {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    .icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 3px;
+    }
+
+    .buttonRow :first-child{
+        gap: 0.5rem;
+    }
+
+    .buttonColumn{
+        font-size: 1rem;
+    }
+    .buttonColumn#signup {
+        font-size: 0.8rem;
+    }
+
+}
+
 @media only screen and (max-width: 768px) {
     body {
         background: linear-gradient(to bottom, #359EFF, #04223f );
@@ -294,11 +333,18 @@ a {
     }
 
     .right_column {
-        padding: 20px 0;  /* Add padding on top and bottom for spacing */
+        padding: 20px 0;  
     }
 
     .left_column{
         height: 35vh;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .left_column img {
+        height: 80%;
     }
 
     .mainText {
@@ -331,7 +377,7 @@ a {
         justify-content: left;
         letter-spacing: 2px;
         background-color: white;
-        color: #424242;
+        color: #000000;
     }
 
     .icon{
@@ -373,7 +419,7 @@ a {
     }
 
     .formButton, a > img {
-        margin: 0 auto;  /* Center align the buttons and images */
+        margin: 0 auto; 
     }
 
 }
