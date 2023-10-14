@@ -160,9 +160,6 @@ body:before {
     margin-top: 5vh;
 }
 
-.buttonRow :nth-child(2) {
-    font-size: 1rem;
-}
 
 .buttonColumn {
     box-sizing: border-box;
@@ -184,6 +181,7 @@ body:before {
 
 .buttonColumn#signup {
     padding-bottom: 5px;
+    font-size: 1rem;
 }
 
 div > img {
@@ -250,10 +248,6 @@ a {
     font-size: 18px;
   }
 
-  .mobileTextChange::before {
-    content: "";
-    display: none;
-}
 
 @media only screen and (min-width: 2000px) {
     .formButton {
@@ -281,6 +275,10 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+    body {
+        background: linear-gradient(to bottom, #359EFF, #04223f );
+    }
+
     .header {
         flex-direction: column;
         padding-top: 5%;
@@ -300,7 +298,7 @@ a {
     }
 
     .left_column{
-        height: 30vh;
+        height: 35vh;
     }
 
     .mainText {
@@ -308,11 +306,11 @@ a {
         text-align: center;
         padding-bottom: 1.5rem;
         font-size: 1.8rem;
-        margin: auto;
+        margin: 1vh auto;
         text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.20);
         font-weight: 500;
         line-height: 100%;
-        letter-spacing: 0.35rem;
+        letter-spacing: 0.3rem;
         text-transform: uppercase;
     }
 
@@ -322,32 +320,56 @@ a {
     }
 
     .feature {
-        width: 380px;
-        padding: 10px 0;
+        width: 255px;
+        padding: 5px 10px;
         justify-content: center;
+        gap: 1rem;
+        font-size: 1.1rem;
         text-align: center;
-        margin:auto;
+        margin:8px auto;
+        border-radius:30px;
         justify-content: left;
+        letter-spacing: 2px;
+        background-color: white;
+        color: #424242;
     }
 
-    .mobileTextChange {
-        visibility: hidden;
-    }
-
-    .mobileTextChange::before {
-        content: "ANALYZE STATS";
-        display: inline;
-        visibility: visible;
+    .icon{
+        height: 28px;
+        width: 28px;
+        text-align: center;
+        line-height: 28px;
+        color: white;
+        background-color: #424242;
+        margin: 0;
+        padding: 0;
+        font-size: 1.2rem;
+        padding-left: 2px;
     }
 
     .buttonRow {
-        flex-direction: column;
-        gap: 2rem;
+        justify-content: space-around;
+        gap: 1rem;
+        padding: 0 4vw;
+        margin-top: 2vh;
+    }
+
+    .buttonRow :first-child {
+        gap: 0.4rem;
     }
 
     .buttonColumn {
-        max-width: 100%;  /* Take full width */
         margin-bottom: 10px;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .buttonColumn#signup {
+        font-size: 0.9rem;
+    }
+
+    .formButton{
+        width: 150px;
     }
 
     .formButton, a > img {
