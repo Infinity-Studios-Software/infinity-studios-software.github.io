@@ -317,6 +317,7 @@ a {
     body {
         background: linear-gradient(to bottom, #359EFF, #04223f );
         height: 98vh;
+        overflow: auto;
     }
 
     .header {
