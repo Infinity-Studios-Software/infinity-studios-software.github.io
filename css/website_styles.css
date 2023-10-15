@@ -247,7 +247,7 @@ a {
         font-size: 1.5rem;
     }
     
-    div > img {
+    .contentDesktop div > img {
         height: 80px; 
     }
     .buttonRow {
