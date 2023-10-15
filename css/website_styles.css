@@ -243,11 +243,11 @@ a {
 @media only screen and (min-width: 2000px) {
     .formButton {
         height: 80px; 
-        width: 200px; 
+        width: 230px; 
         font-size: 1.5rem;
     }
     
-    a > img {
+    div > img {
         height: 80px; 
     }
     .buttonRow {
