@@ -314,9 +314,9 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-    body {
+    body, html {
         background: linear-gradient(to bottom, #359EFF, #04223f );
-        height: 98vh;
+        height: 100vh;
         overflow: auto;
     }
 
