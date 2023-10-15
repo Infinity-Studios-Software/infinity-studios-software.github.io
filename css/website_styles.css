@@ -317,6 +317,9 @@ a {
     body {
         background: linear-gradient(to bottom, #359EFF, #04223f );
     }
+    body, html {
+        overflow:auto;
+    }
 
     .header {
         flex-direction: column;
