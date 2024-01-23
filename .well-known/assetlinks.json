@@ -1,0 +1,9 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.infinitystudios.pufftracker",
+      "sha256_cert_fingerprints":
+      ["25:0F:1E:B6:BB:BC:62:DC:43:BA:A1:4E:3E:C4:A9:B3:59:37:28:9A:77:5C:54:96:38:4F:11:C5:FE:16:1C:15"]
+    }
+}]
