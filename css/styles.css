@@ -213,6 +213,7 @@ h1 {
 h2 {
   font-size: 3.75rem;
   font-weight: 900;
+  color: #555;
 }
 
 p {
@@ -316,7 +317,7 @@ section {
 }
 
 .red_dot {
-  background: linear-gradient(to bottom, #d90647 10%, #eb402c 100%);
+  background: #2377ff;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -328,6 +329,7 @@ section {
 
 .little-description {
   margin-top: 1.875rem;
+
   font-size: 1.125rem;
 }
 
@@ -344,18 +346,18 @@ section {
   background: #d90647; /* Old browsers */
   background: -moz-linear-gradient(
     top,
-    #d90647 37%,
-    #eb402c 98%
+    #359EFF 37%,
+    #335FFF 98%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    #d90647 37%,
-    #eb402c 98%
+    #4067f3 10%,
+    #35b5ff 98%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
-    to bottom,
-    #d90647 37%,
-    #eb402c 98%
+    top,
+    #335FFF 37%,
+    #359EFF 98%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d90647', endColorstr='#eb402c',GradientType=0 ); /* IE6-9 */
   background-repeat: no-repeat;
@@ -374,7 +376,7 @@ nav {
 }
 
 .logo {
-  font-size: 3.125rem;
+  font-size: 3rem;
   font-weight: 900;
 }
 
@@ -404,7 +406,7 @@ nav {
 }
 
 .sticky .logo {
-  color: #d90647;
+  color: #5BB0FF;
 }
 
 .sticky #navbar ul li a {
@@ -412,7 +414,7 @@ nav {
 }
 
 .sticky #navbar ul li a:hover {
-  color: #d90647;
+  color: #5BB0FF;
 }
 
 .sticky .navbar {
@@ -474,7 +476,7 @@ nav {
 }
 
 .overlay-content a:hover {
-  color: #d90647;
+  color: #5BB0FF;
 }
 /* End: Mobile Menu Styling */
 
@@ -488,6 +490,7 @@ nav {
   margin-top: 3.125rem;
   float: left;
   margin-left: 1.875rem;
+  margin-right: 3.5rem;
 }
 
 .hero-description p {
@@ -498,7 +501,7 @@ nav {
 }
 
 .download-btn {
-  background: linear-gradient(to bottom, #d90647 10%, #eb402c 100%);
+  background: linear-gradient(to bottom, #5BB0FF 10%, #eb402c 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -549,7 +552,7 @@ nav {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background: #d90647; /* Old browsers */
+  background: #5BB0FF; /* Old browsers */
   background: -moz-linear-gradient(
     top,
     #d90647 37%,
@@ -560,11 +563,7 @@ nav {
     #d90647 37%,
     #eb402c 98%
   ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #d90647 37%,
-    #eb402c 98%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: linear-gradient(to bottom, #2377ff 10%, rgb(77, 74, 252) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d90647', endColorstr='#eb402c',GradientType=0 ); /* IE6-9 */
   background-repeat: no-repeat;
   color: #ffffff; /* Text color */
@@ -642,7 +641,7 @@ nav {
 }
 
 .company-name {
-  background: linear-gradient(to bottom, #d90647 10%, #eb402c 100%);
+  background: linear-gradient(to bottom, #2377ff 10%, #2377ff 90%, rgb(113, 43, 255) 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -685,18 +684,18 @@ nav {
   background: #d90647; /* Old browsers */
   background: -moz-linear-gradient(
     top,
-    #d90647 37%,
-    #eb402c 98%
+    #359EFF 37%,
+    #335FFF 98%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    #d90647 37%,
-    #eb402c 98%
+    #4067f3 10%,
+    #35b5ff 98%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
-    to bottom,
-    #d90647 37%,
-    #eb402c 98%
+    top,
+    #335FFF 37%,
+    #359EFF 98%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d90647', endColorstr='#eb402c',GradientType=0 ); /* IE6-9 */
   background-repeat: no-repeat;
@@ -817,8 +816,8 @@ nav {
 }
 
 .app-logo {
-  -webkit-filter: drop-shadow(0 10px 30px rgba(223, 27, 60, 0.3));
-  filter: drop-shadow(0 10px 30px rgba(223, 27, 60, 0.3));
+  -webkit-filter: drop-shadow(0 10px 30px rgba(27, 154, 223, 0.3));
+  filter: drop-shadow(0 10px 30px rgba(27, 154, 223, 0.3));
 }
 /* End: Download The App Section Styling */
 
@@ -1031,10 +1030,6 @@ nav {
     margin: 8px 0;
     margin-right: 20px;
     font-size: 16px;
-  }
-
-  .language-option {
-    margin: 5px auto;
   }
 
   #testimonial .col {
@@ -1515,4 +1510,54 @@ nav {
     max-width: 350px;
     margin-top: -135px;
   }
+}
+
+/* CUSTOM */
+
+img.inline-icon {
+  vertical-align: middle;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  width: auto; /* Keep the image's aspect ratio */
+  height: 1em; /* Scales the image to match the line-height of the text */
+}
+
+/* Container for the download buttons */
+.download-buttons {
+  display: flex; /* Aligns items in a row */
+  justify-content: start; /* Aligns the buttons to the start of the container */
+  gap: 3vw; /* Adds space between the buttons */
+
+  margin-right: 6vw;
+}
+
+/* Styles for the buttons */
+.download-buttons a.btn {
+  display: block; /* Makes the anchor block level to hold the image properly */
+  border: none; /* Removes border if any */
+  margin: 5px; /* Adjust space around the buttons if needed */
+  transition: transform 0.3s ease; /* For a simple hover effect */
+}
+
+/* Image styles for the buttons */
+.download-buttons a.btn img {
+  height: auto; /* Keeps image aspect ratio */
+  width: 150px; /* Example width; you may need to adjust this */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.download-buttons a.btn:hover,
+.download-buttons a.btn:focus {
+  transform: translateY(-5px); /* Moves the button up a bit */
+  opacity: 0.9; /* Slightly decreases opacity */
+}
+
+#download .download-buttons{
+  margin-top: 50px;
+  width: 800px;
+}
+
+.subtext {
+  font-size: 1.4rem;
 }
