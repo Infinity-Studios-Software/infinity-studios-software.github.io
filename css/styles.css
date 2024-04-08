@@ -332,7 +332,7 @@ section {
 }
 
 .row {
-  max-width: 1176px;
+  max-width: 1300px;
   margin: auto;
 }
 /* End: Reusable Components */
@@ -887,6 +887,14 @@ nav {
     width: 100% !important;
   }
 
+  .span_1_of_2_60 {
+    width: 100% !important;
+  }
+  .span_2_of_2 {
+    width: 100% !important;
+  }
+
+
   ::placeholder {
     text-align: center;
   }
@@ -1071,6 +1079,12 @@ nav {
   }
 
   .span_1_of_2 {
+    width: 100% !important;
+  }
+  .span_1_of_2_60 {
+    width: 100% !important;
+  }
+  .span_2_of_2 {
     width: 100% !important;
   }
 
