@@ -185,7 +185,7 @@ html {
 
 ::selection {
   background-color: #ffffff;
-  color: #d90647;
+  color: #5BB0FF;
 }
 
 body {
@@ -256,7 +256,7 @@ section {
 .preloader .loader {
   height: 2.5rem;
   width: 2.5rem;
-  border: 0.25rem solid #d90647;
+  border: 0.25rem solid #5BB0FF;
   border-radius: 50%;
   border-top: 0.25rem solid transparent;
   border-bottom: 0.25rem solid transparent;
@@ -400,7 +400,7 @@ nav {
   background-color: #fff;
   z-index: 500;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  color: #d90647;
+  color: #5BB0FF;
   padding: 10px 40px;
   transition: 0.3s;
 }
@@ -453,7 +453,7 @@ nav {
   background-color: #ffffff;
   z-index: 9999;
   overflow: hidden;
-  color: #d90647;
+  color: #5BB0FF;
   transition: 0.3s;
   text-align: center;
 }
@@ -508,7 +508,7 @@ nav {
 }
 
 .hero-img {
-  max-width: 28% !important;
+  max-width: 33% !important;
   float: right;
   z-index: 1;
   position: absolute;
@@ -588,6 +588,10 @@ nav {
   height: 100%;
   padding-bottom: 200px;
   border-bottom: 1px solid #e0e0e0;
+}
+
+.features-images{
+  padding: 0px 50px;
 }
 
 .features_3 {
@@ -839,7 +843,7 @@ nav {
 }
 
 .links ul li:hover {
-  background: linear-gradient(to bottom, #d90647 10%, #eb402c 100%);
+  background: linear-gradient(to bottom, #2f98f9 10%, #0072de 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -937,6 +941,7 @@ nav {
   }
 
   .features-description {
+    padding-top: 100px;
     width: 100%;
   }
 
