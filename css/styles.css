@@ -735,8 +735,7 @@ nav {
 .big_image {
   /* position: absolute;
   top: -66px; */
-  max-width: 325px;
-  margin-top: -125px;
+  margin: auto;
 }
 
 .first-item,
@@ -966,6 +965,13 @@ nav {
     flex-direction: column-reverse;
   }
 
+  .second-col {
+    display: flex; /* Establishes this element as a flex container */
+    justify-content: center; /* Centers children horizontally in the container */
+    align-items: center; /* Centers children vertically in the container */
+    height: 100%; /* Give it a height so align-items has an effect */
+  }
+
   #testimonial .row {
     margin-top: 3.25rem;
   }
@@ -1060,6 +1066,9 @@ nav {
     font-size: 16px;
     display: block;
     margin: auto;
+  }
+  .features-images{
+    padding: 0px;
   }
 }
 
@@ -1303,7 +1312,7 @@ nav {
   }
 
   .section-description {
-    margin-top: 150px;
+    margin-top: 50px;
   }
 
   .little-description {
@@ -1427,7 +1436,7 @@ nav {
   }
 
   .section-description {
-    margin-top: 180px;
+    margin-top: 100px;
   }
 
   .little-description {
@@ -1523,7 +1532,14 @@ nav {
 
   .big_image {
     max-width: 350px;
+    width: 100%;
     margin-top: -135px;
+  }
+  .second-col {
+    display: flex !important; /* Establishes this element as a flex container */
+    justify-content: center; /* Centers children horizontally in the container */
+    align-items: center; /* Centers children vertically in the container */
+    height: 100%; /* Give it a height so align-items has an effect */
   }
 }
 
