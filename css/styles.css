@@ -911,7 +911,24 @@ nav {
   }
 
   .hero-description .download-buttons {
-    margin-right: 0;
+    flex-direction: column;
+    width: 200px;
+    margin: auto;
+    gap: 0px;
+  }
+
+  #download .download-buttons {
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    gap: 0px;
+}
+  #download .download-buttons{
+    margin-top: 50px;
+  }
+  .download-btn {
+    height: 100px;
+    margin: 0 !important;
   }
 
   #hero {
@@ -1257,6 +1274,11 @@ nav {
     display: block;
     margin: auto;
   }
+
+  .download-buttons{
+    margin-top: 50px;
+    margin-right: 0 !important;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -1309,6 +1331,7 @@ nav {
 
   .hero-description .download-buttons {
     gap: 5px;
+    margin: auto;
   }
 
   .section-description {
@@ -1384,6 +1407,11 @@ nav {
     padding-right: 100px;
     font-size: 18px;
     margin: auto;
+  }
+
+  .download-buttons{
+    margin-top: 50px;
+    margin-right: 0 !important;
   }
 }
 
@@ -1558,7 +1586,6 @@ img.inline-icon {
   display: flex; /* Aligns items in a row */
   justify-content: start; /* Aligns the buttons to the start of the container */
   gap: 3vw; /* Adds space between the buttons */
-
   margin-right: 6vw;
 }
 
