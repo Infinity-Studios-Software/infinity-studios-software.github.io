@@ -511,6 +511,7 @@ nav {
   max-width: 33% !important;
   float: right;
   z-index: 1;
+  max-height: 600px;
   position: absolute;
   /* right: 9.375rem; */
 }
@@ -910,6 +911,10 @@ nav {
     padding: 30px;
   }
 
+  .hero-description .download-buttons {
+    margin-right: 0;
+  }
+
   #hero {
     margin: 50px 0;
   }
@@ -927,6 +932,7 @@ nav {
     margin-top: 0.625rem;
     float: none;
     margin-left: 0;
+    margin-right: 0;
   }
   .hero-description p {
     font-size: 16px;
@@ -1292,6 +1298,10 @@ nav {
     right: 0.375rem;
   }
 
+  .hero-description .download-buttons {
+    gap: 5px;
+  }
+
   .section-description {
     margin-top: 150px;
   }
@@ -1560,7 +1570,7 @@ img.inline-icon {
 
 #download .download-buttons{
   margin-top: 50px;
-  width: 800px;
+  max-width: 800px;
 }
 
 .subtext {
