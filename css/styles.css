@@ -913,8 +913,11 @@ nav {
   .hero-description .download-buttons {
     flex-direction: column;
     width: 200px;
+    height: 120px;
     margin: auto;
     gap: 0px;
+    margin-bottom: 30px;
+    margin-top: 50px;
   }
 
   #download .download-buttons {
@@ -932,7 +935,7 @@ nav {
   }
 
   #hero {
-    margin: 50px 0;
+    margin: 90px 0;
   }
 
   .logo {
@@ -959,11 +962,11 @@ nav {
   }
 
   #features {
-    padding-bottom: 50px;
+    padding-bottom: 90px;
   }
 
   .features-description {
-    padding-top: 100px;
+    padding-top: 50px;
     width: 100%;
   }
 
@@ -976,7 +979,8 @@ nav {
   }
 
   .second-features-row {
-    margin-top: 3.25rem;
+    margin: 0 auto;
+    margin-top: 6.25rem;
     display: flex;
     flex-flow: column;
     flex-direction: column-reverse;
@@ -1037,7 +1041,8 @@ nav {
     height: auto;
     width: 100% !important;
     margin: 0 auto;
-    margin-top: 50px;
+    padding-bottom: 20px;
+    padding-top: 10px;
   }
 
   .subscribe-form {
@@ -1559,7 +1564,7 @@ nav {
   }
 
   .big_image {
-    max-width: 350px;
+    max-width: 380px;
     width: 100%;
     margin-top: -135px;
   }
