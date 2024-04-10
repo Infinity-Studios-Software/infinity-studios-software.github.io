@@ -587,7 +587,7 @@ nav {
 /* Features Section Styling */
 #features {
   height: 100%;
-  padding-bottom: 200px;
+  padding-bottom: 120px;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -600,7 +600,7 @@ nav {
 }
 
 .second-features-row {
-  margin-top: 6.25rem;
+  margin-top: 5.25rem;
 }
 /* End: Features Section Styling */
 
@@ -612,7 +612,7 @@ nav {
   text-align: center;
 }
 #testimonial .row {
-  margin-top: 6.25rem;
+  margin-top: 5.25rem;
 }
 
 .bubble {
@@ -708,7 +708,7 @@ nav {
   height: 24.375rem;
   width: 100%;
   position: relative;
-  margin-top: 6.25rem;
+  margin-top: 5.25rem;
 }
 
 #howto p {
@@ -1136,7 +1136,7 @@ nav {
   }
 
   #features {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
 
   .features-description {
