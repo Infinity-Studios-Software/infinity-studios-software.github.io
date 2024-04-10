@@ -1,139 +1,58 @@
-  //Import the THREE.js library
-  import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
-  import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
-  import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
-  import { MyAxis } from './MyAxis.js';
+//Get the button:
+mybutton = document.getElementById("scrollUp");
 
-(function tryLoading() {
-  // Check the body width first
-  if (document.body.clientWidth < 768) {
-      
-      // Retry after 2 seconds
-      setTimeout(tryLoading, 2000);
-      return;
+function scrollFunction() {
+  if (
+    document.body.scrollTop > sticky ||
+    document.documentElement.scrollTop > sticky
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
   }
+}
 
-  //Create a Three.JS Scene
-  const scene = new THREE.Scene();
-  //create a new camera with positions and angles
-  let container = document.getElementById("container3D");
-  const camera = new THREE.PerspectiveCamera(64, container.clientWidth / container.clientHeight, 0.1, 1000);
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
-  //Keep track of the mouse position, so we can make the eye move
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
+// Functional Sticky Navbar
+window.onscroll = function () {
+  myFunction();
+  scrollFunction();
+};
 
-  //Keep the 3D object on a global variable so we can access it later
-  let object;
+var navbar = document.querySelector("nav");
+var services = document.querySelector("#features");
+var sticky = services.offsetTop;
 
-  //OrbitControls allow the camera to move around the scene
-  let controls;
-
-  //Set which object to render
-  let objToRender = 'phone';
-
-  //Instantiate a loader for the .gltf file
-  const loader = new GLTFLoader();
-
-  //Load the file
-  loader.load(
-    `models/${objToRender}/scene.gltf`,
-    function (gltf) {
-      object = gltf.scene;
-      object.rotation.set(-Math.PI/50, Math.PI*1.25, Math.PI/15);
-      object.scale.set(10, 10, 10);
-      object.position.set(0, 0.3, 0.2);
-      scene.add(object);
-      // Hide the loading animation when loading is complete
-      const loadingHint = document.getElementById("loading-text"); // Change "loading-hint" to "loading-animation"
-      loadingHint.style.display = "none";
-    },
-    function (xhr) {
-      //While it is loading, log the progress
-      console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-    },
-    function (error) {
-      console.error(error);
-      const loadingAnimation = document.getElementById("loading-text");
-      loadingAnimation.style.display = "none";
-    }
-  );
-
-
-  camera.position.set(-1.4, 0.5, 1.3); 
-  camera.lookAt(0, 0, 0); 
-
-  const renderer = new THREE.WebGLRenderer({ alpha: true , antialias: true });
-  renderer.setPixelRatio(window.devicePixelRatio); // This line is important!
-  container = document.getElementById("container3D");
-  renderer.setSize(container.clientWidth, container.clientHeight);
-
-  document.getElementById("container3D").appendChild(renderer.domElement);
-
-
-  //Add lights to the scene, so we can actually see the 3D model
-  const topLight = new THREE.DirectionalLight(0xffffff, 0.63); // (color, intensity)
-  topLight.position.set(-4.5, 4, 3) //top-left-ish
-  scene.add(topLight);
-
-  //Add lights to the scene, so we can actually see the 3D model
-  const bottomLight = new THREE.DirectionalLight(0xffffff, 0.49); // (color, intensity)
-  bottomLight.position.set(0, 2, 10) //bottom left ish
-  scene.add(bottomLight);
-
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-  scene.add(ambientLight);
-
-  // Set up target rotation variables
-  let targetRotationX = 0;
-  let targetRotationY = -0.5;
-
-  // Define a lerp factor. Values closer to 0 will make the rotation adjust more slowly.
-  const lerpFactor = 0.02;
-
-  let time = 0;
-  const amplitudeX = 0.01;  
-  const frequencyX = 1; 
-
-  const amplitudeY = 0.06; 
-  const frequencyY = 0.7;  
-
-  function animate() {
-    requestAnimationFrame(animate);
-
-    if(object != null) {
-    // // Oscillate the targetRotationX and targetRotationY values
-    targetRotationX = -Math.PI/60 + amplitudeX * Math.sin(time * frequencyX);
-    targetRotationY = Math.PI*1.23 + amplitudeY * Math.sin(time * frequencyY); // Added oscillation to the Y rotation
-    
-    // Adjust target rotation value for Y based on mouse position
-    targetRotationY += mouseX * 1 / (window.innerWidth * 3.2);
-
-    // Use lerp to smoothly adjust the rotation
-    object.rotation.y += (targetRotationY - object.rotation.y) * lerpFactor;
-    object.rotation.x += (targetRotationX - object.rotation.x) * lerpFactor;
-
-    time += 0.01; 
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
   }
+}
 
-    renderer.render(scene, camera);
-  }
+$(document).ready(function () {
+  // Preloader
+  document.querySelector(".preloader").classList.add("opacity-0");
+  setTimeout(function () {
+    document.querySelector(".preloader").style.display = "none";
+  }, 1000);
 
+  //   Nice Select Initialization
+  $("select").niceSelect();
+});
 
+// Navbar Open Function on Mobile Menu
+function openNav() {
+  $("#myNav").css("width", "100%");
+}
 
-  //Add a listener to the window, so we can resize the window and the camera
-  window.addEventListener("resize", function () {
-    const container = document.getElementById("container3D");
-    camera.aspect = container.clientWidth / container.clientHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(container.clientWidth, container.clientHeight);
-  });
-
-  document.onmousemove = (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  }
-
-  animate();
-
-})();
+// Navbar Close Function on Mobile Menu
+function closeNav() {
+  $("#myNav").css("width", "0");
+}

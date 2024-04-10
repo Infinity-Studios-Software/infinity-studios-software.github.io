@@ -1,95 +1,470 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puff Tracker</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/website_styles.css">
-    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
- 
-    <script type="importmap">
-    {
-      "imports": {
-        "three": "https://unpkg.com/three@0.156.1/build/three.module.js",
-        "three/addons/": "https://unpkg.com/three@0.156.1/examples/jsm/"
-      }
-    }
-  </script>
-</head>
-<body>
-    <div class="header">
-        <div>
-            <img src="assets/logo.png" alt="Website Logo" class="logo">
-            <h2 class="title">PUFF TRACKER</h2>
-        </div>
-        <a id="tos" href="tos.html" target="_blank">Terms of Service</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puff Tracker - Vape App</title>
+
+    <!-- Favicon -->
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="images/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- End: Favicon -->
+
+    <!-- Required Social Preview MetaTags -->
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Puff Tracker - Vape Network App" />
+    <meta
+      name="description"
+      content="Puff Tracker is a vape network app that helps you to track your vaping habits. It's a simple, secure, and beautiful app for all vapers"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alnahian2003.github.io/heyu" />
+    <meta property="og:title" content="Puff Tracker - Vape App" />
+    <meta
+      property="og:description"
+      content="Puff Tracker is a vape network app that helps you to track your vaping habits. It's a simple, secure, and beautiful app for all vapers"
+    />
+    <meta property="og:image" content="images/preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://pufftracker.com" />
+    <meta property="twitter:title" content="Vape Network App" />
+    <meta
+      property="twitter:description"
+      content="Puff Tracker is a vape network app that helps you to track your vaping habits. It's a simple, secure, and beautiful app for all vapers"
+    />
+    <meta property="twitter:image" content="images/preview.png" />
+
+    <!-- End of Required Social Preview MetaTags -->
+
+    <!-- LATO — Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- End: LATO — Google Font -->
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <!-- End: Main CSS File -->
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader"></div>
     </div>
-    <div id="container3D">
-        <div id="loading-text">Loading 3D model...</div>
-    </div>
-    <div class="contentDesktop">
-        <div class="left_column">
+    <!-- Preloader End -->
+    <!-- Header Section -->
+    <header id="home">
+      <nav>
+        <div class="navbar-logo">
+          <a href="#" class="logo">Puff Tracker</a>
         </div>
-        <div class="right_column">
-            <div class="mainText">Track your vaping habits</div>
-            <div class="featureRow">
-                <div class="feature">
-                    <div class="icon">1</div>
-                    <span>VISUALIZE PUFFS</span>
-                </div>
-                <div class="feature">
-                    <div class="icon">2</div>
-                    <span>ANALYZE STATISTICS</span>
-                </div>
-                <div class="feature">
-                    <div class="icon">3</div>
-                    <span>DEFINE GOALS</span>
-                </div>
-            </div>
-            <div class="buttonRow">
-                <div class="buttonColumn">
-                    <div> 
-                        <a href="https://play.google.com/store/apps/details?id=com.infinitystudios.pufftracker"><img src="assets/playstore-button.png" alt="Download on Play Store" class="playstore-button"></a>
-                    </div>
-                </div>
-                <div class="buttonColumn" id="signup">
-                    <span>Help us improve the app by filling <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3o4VItd2QfnsVl2lgKHSf18kWZ8BN4v1nLTkDCLGqOCpgsA/viewform?usp=sf_link">this research survey</a></span>
-                </div>
-            </div>
+        <div id="navbar">
+          <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#features">FEATURES</a></li>
+            <li><a href="#testimonial">TESTIMONIALS</a></li>
+            <li><a href="tos.html">TOS</a></li>
+          </ul>
         </div>
-    </div>
-    <div class="contentMobile">
-        <div class="left_column">
-            <img src="assets/mockups-mobile.png">
+        <div id="mobileNav">
+          <span onclick="openNav()">&#9776;</span>
         </div>
-        <div class="right_column">
-            <div class="mainText">Track your vaping habits</div>
-            <div class="featureRow">
-                <div class="feature">
-                    <div class="icon">1</div>
-                    <span>VISUALIZE PUFFS</span>
-                </div>
-                <div class="feature">
-                    <div class="icon">2</div>
-                    <span class="mobileTextChange">ANALYZE STATS</span>
-                </div>
-                <div class="feature">
-                    <div class="icon">3</div>
-                    <span>DEFINE GOALS</span>
-                </div>
-            </div>
-            <div class="buttonRow">
-                <div class="buttonColumn">
-                    <div> 
-                        <a href="https://play.google.com/store/apps/details?id=com.infinitystudios.pufftracker"><img src="assets/playstore-button.png" alt="Download on Play Store" class="playstore-button"></a>                    </div>
-                </div>
-                <div class="buttonColumn" id="signup">
-                    <span>Help us improve the app by filling <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3o4VItd2QfnsVl2lgKHSf18kWZ8BN4v1nLTkDCLGqOCpgsA/viewform?usp=sf_link">this research survey</a></span>
-                </div>
-            </div>
+        <div id="myNav" class="mobileNavOverlay">
+          <div class="overlay-content">
+            <a href="javascript:void()" class="close-btn" onclick="closeNav()"
+              >&times;</a
+            >
+            <a href="#home" onclick="closeNav()">HOME</a>
+            <a href="#features" onclick="closeNav()">FEATURES</a>
+            <a href="#testimonial" onclick="closeNav()">TESTIMONIAL</a>
+            <a href="#download" onclick="closeNav()">TOS</a>
+          </div>
         </div>
-    </div>
-    <script type="module" src="js/main.js"></script>
-</body>
+      </nav>
+      <div id="hero">
+        <div class="row">
+          <div class="col span_1_of_2_60">
+            <div class="hero-description">
+              <h1>The #1 Vaping App</h1>
+              <p>
+                Join thousands of like minded people and take advantage of
+                <br /><span class="bold-text">Puff Tracker</span>'s tools to
+                elevate your experience!
+              </p>
+
+              <div class="download-buttons">
+                <a href="#download-appstore" class="download-btn">
+                  <img
+                    src="images/appstore.png"
+                    alt="Download from App Store"
+                  />
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.infinitystudios.pufftracker" class="download-btn">
+                  <img
+                    src="images/playstore.png"
+                    alt="Download from Google Play"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col span_2_of_2">
+            <img class="hero-img" src="images/mockup-header.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="shape-divider">
+        <div class="custom-shape-divider-bottom-1603385849">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <button onclick="topFunction()" id="scrollUp" title="Go to top">
+        <svg
+          width="1.5rem"
+          height="1.5rem"
+          viewBox="0 0 16 16"
+          class="bi bi-arrow-up"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
+          />
+        </svg>
+      </button>
+    </header>
+    <!-- End: Header Section -->
+
+    <!-- Features Section -->
+    <section id="features">
+      <div class="row">
+        <div class="col span_1_of_2">
+          <div class="features-images">
+            <img class="features_1" src="images/features1.png" alt="" />
+          </div>
+        </div>
+        <div class="col span_1_of_2">
+          <div class="section-description features-description col1">
+            <h2 class="stylish_heading">
+              For everyone <span class="red_dot">.</span>
+            </h2>
+            <p class="little-description">
+              Wether you're a vape enthusiast who wants to create new e-liquid
+              mixes and track them, or a quitter who wants to track their
+              progress, Puff Tracker is the perfect tool for you.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row second-features-row">
+        <div class="col span_1_of_2">
+          <div class="section-description features-description">
+            <h2 class="stylish_heading">
+              Keep in touch <span class="red_dot">.</span>
+            </h2>
+            <p class="little-description">
+              Discover a supportive community tailored to your vaping interests
+              and goals. Puff Tracker welcomes you with open arms, offering
+              specialized feeds for both vaping aficionados and those committed
+              to quitting. Share your journey, exchange tips on setups, and find
+              encouragement every step of the way.
+            </p>
+          </div>
+        </div>
+        <div class="col span_1_of_2">
+          <div class="features-images">
+            <img class="features_3" src="images/features2.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: Features Section -->
+
+    <!-- Testimonial Section -->
+    <section id="testimonial">
+      <h2 class="stylish_heading">
+        What people say <span class="red_dot">.</span>
+      </h2>
+      <div class="row">
+        <div class="col span_1_of_3">
+          <div class="bubble">
+            <p class="message">
+              "Puff Tracker is now more than a tracking app - it's a community.
+              Seeing my friends' puff stats and e-liquid is really cool. And the
+              calculators are super handy for mixing my own liquids."
+            </p>
+            <span class="company-name">Vape enthusiast</span>
+          </div>
+          <div class="client-info">
+            <img class="avatar" src="images/review_person_1.png" alt="" />
+            <div class="name">
+              <h4>Ashley</h4>
+              <p class="role">United States</p>
+            </div>
+          </div>
+        </div>
+        <div class="col span_1_of_3">
+          <div class="bubble">
+            <p class="message">
+              "Connecting with the community in Puff Tracker is awesome! I love
+              seeing everyone's unique vape setups and chatting about all the
+              cool new e-liquids and devices out there."
+            </p>
+            <span class="company-name">Vape Geek</span>
+          </div>
+          <div class="client-info">
+            <img class="avatar" src="images/review_person_2.png" alt="" />
+            <div class="name">
+              <h4>Omar</h4>
+              <p class="role">United Arab Emirates</p>
+            </div>
+          </div>
+        </div>
+        <div class="col span_1_of_3">
+          <div class="bubble">
+            <p class="message">
+              "This app helped me slow down and stop vaping my THC pen. Loved
+              having the ability to connect with friends and compare puff stats,
+              it adds a lot of fun and competitive edge."
+            </p>
+            <span class="company-name">Quitter</span>
+          </div>
+          <div class="client-info">
+            <img class="avatar" src="images/review_person_3.png" alt="" />
+            <div class="name">
+              <h4>James</h4>
+              <p class="role">United Kingdom</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: Testimonial Section -->
+
+    <!-- How To Section -->
+    <section id="howto">
+      <div class="row">
+        <div class="col span_1_of_3 first-col">
+          <div class="first-item">
+            <div class="item-description">
+              <h4>Connect & Share</h4>
+              <p>
+                Start a conversation and connect with a unique network tailored
+                for vapers. Share photos, get feedback on your setups, and
+                inspire others with your vaping journey.
+              </p>
+            </div>
+            <div class="item-icon1">
+              <svg
+                width="2.5rem"
+                height="2.5rem"
+                viewBox="0 0 16 16"
+                class="bi bi-chat-dots"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"
+                />
+                <path
+                  d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="first-item">
+            <div class="item-description">
+              <h4>Master the Mix</h4>
+              <p>
+                Elevate your e-liquid crafting with our intuitive mixing
+                calculator. Create the perfect blend, save your favorite
+                recipes, and tweak them to perfection
+              </p>
+            </div>
+            <div class="item-icon1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="3rem"
+                height="3rem"
+                viewBox="0 -960 960 960"
+                class="bi bi-camera-video"
+                fill="currentColor"
+              >
+                <path
+                  d="M186.462-140.001q-33.93 0-48.234-30.974-14.303-30.974 8.388-56.973L385.95-508.205v-261.539h-53.641q-10.68 0-17.904-7.263t-7.224-17.999q0-10.737 7.224-17.865 7.224-7.128 17.904-7.128h295.382q10.68 0 17.904 7.263t7.224 18q0 10.736-7.224 17.864t-17.904 7.128H574.05v261.539l239.333 280.257q22.692 25.999 8.389 56.973-14.304 30.974-48.233 30.974H186.462Zm-5.949-50.255h598.974L523.795-490.103v-279.641h-87.59v279.641L180.513-190.256ZM478.923-480Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="col span_1_of_3 second-col">
+          <img class="big_image" src="images/mockup3-no-shadow.png" alt="" />
+        </div>
+        <div class="col span_1_of_3 third-col">
+          <div class="last-item">
+            <div class="item-icon2">
+              <svg
+                height="3rem"
+                class="bi bi-chat-dots"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+              >
+                <path
+                  d="M130.001-130.001v-63.87l50.255-50.255v114.125h-50.255Zm162.564 0v-223.87l50.255-50.255v274.125h-50.255Zm162.308 0v-274.125l50.254 51.255v222.87h-50.254Zm162.564 0v-222.87l50.255-50.255v273.125h-50.255Zm162.307 0v-383.87l50.255-50.255v434.125h-50.255ZM130.001-365.438v-70.741L400-705.358l160 160 269.999-270.409v70.997L560-474.36l-160-160-269.999 268.922Z"
+                />
+              </svg>
+            </div>
+            <div class="item-description">
+              <h4>Analyze Your Habits</h4>
+              <p>
+                Dive into your vaping habits with our in-depth analysis tools.
+                Visual charts offer insights into your trends, averages, and
+                totals, helping you monitor and manage your intake.
+              </p>
+            </div>
+          </div>
+          <div class="last-item">
+            <div class="item-icon2">
+              <svg
+                width="3rem"
+                height="3rem"
+                class="bi bi-chat-dots"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+              >
+              <path d="m804.231-90.155-367.075-367.46Q378.155-449.231 326.501-421t-88.731 67.077l-46.845-46.845q38.923-39.308 85.346-68.269 46.424-28.962 105.655-44.808L247.848-647.539q-47.385 20.693-94.385 54.116Q106.462-560 68.77-523.307l-46.46-46.845q39.076-39.693 84.308-73.424 45.231-33.731 89.385-55.192l-93.539-93.539 32.615-32.614L837.23-122.77l-32.999 32.615ZM480-136.616q-29.461 0-51.461-21.807-21.999-21.808-21.999-51.653 0-29.461 21.999-51.461 22-22 51.461-22t51.461 22q21.999 22 21.999 51.461 0 29.845-21.999 51.653-22 21.807-51.461 21.807Zm244.923-220.769q-25.307-24.307-45.768-39.383-20.461-15.077-52.461-29.846l-90.69-91.075q67.305 3.538 124.035 33.999 56.73 30.461 109.036 82.153l-44.152 44.152ZM891.23-523.307q-84.923-82.077-188.653-130.346Q598.846-701.922 480-701.922q-32.769 0-63.499 3.73-30.731 3.731-51.423 10.192l-55.691-55.306q35.153-12.154 78.383-19.038 43.23-6.885 92.23-6.885 134.23 0 251.768 54.154 117.538 54.154 206.692 144.923l-47.23 46.845Z"/>
+              </svg>
+            </div>
+            <div class="item-description">
+              <h4>Vape Smart</h4>
+              <p>
+                Vape smarter with Puff Tracker's offline capabilities. Edit your
+                eliquids, set personalized goals and customize your app
+                experience with your favorite color themes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: How To Section -->
+
+    <!-- Subscribe Section 
+    <section id="subscribe">
+      <div class="row">
+        <h2 class="stylish_heading">
+          Subscribe to our newsletter <span class="red_dot">.</span>
+        </h2>
+        <p class="">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna.
+        </p>
+      </div>
+      <div class="subscribe-form">
+        <input
+          class="form-input"
+          type="email"
+          placeholder="Your email address"
+          required
+        />
+        <input type="submit" class="btn subscribe-btn" value="Subscribe" />
+      </div>
+    </section>
+    End: Subscribe Section -->
+
+    <!-- Download The App Section -->
+    <section id="download">
+      <div class="row">
+        <img class="app-logo" src="images/app_logo.png" alt="" />
+        <h2 class="stylish_heading">
+          Download the app <span class="red_dot">.</span>
+        </h2>
+        <p class="subtext">Join the community and get connected!</p>
+
+        <div class="download-buttons">
+          <a href="#download-appstore" class="download-btn">
+            <img src="images/appstore.png" alt="Download from App Store" />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.infinitystudios.pufftracker" class="download-btn">
+            <img src="images/playstore.png" alt="Download from Google Play" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- End: Download The App Section -->
+
+    <!-- Footer Section -->
+    <section id="footer">
+      <div class="links">
+        <ul>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#features">FEATURES</a></li>
+          <li><a href="#testimonial">TESTIMONIALS</a></li>
+          <li><a href="#download">DOWNLOAD</a></li>
+          <li><a href="#tos">TOS</a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- End: Footer Section -->
+
+    <!-- Required JavaScript Files & CDN -->
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Main JS Files -->
+    <script src="js/essential.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
