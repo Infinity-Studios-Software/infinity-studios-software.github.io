@@ -1,0 +1,11 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+      {
+        "appID": "344WPSZ7X5.infinity.studios.pufftracker",
+        "paths": ["*"]
+      }
+    ]
+  }
+}
