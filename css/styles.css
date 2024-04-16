@@ -813,6 +813,7 @@ nav {
 #download {
   text-align: center;
   padding: 100px;
+  padding-bottom: 0px;
 }
 
 #download * {
@@ -853,6 +854,37 @@ nav {
   color: #363636;
 }
 /* End: Footer Section Styling */
+
+
+.support-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjusts space between items */
+  padding: 20px;
+  padding-bottom: 70px;
+}
+
+h3 {
+  margin: 0; /* Removes default margin to better control spacing */
+  font-size: 1.5rem; /* Example font size, adjust as needed */
+}
+
+.email-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.email-button:hover {
+  background-color: #0056b3;
+}
+
+
 
 /* End: Main CSS Rules */
 
