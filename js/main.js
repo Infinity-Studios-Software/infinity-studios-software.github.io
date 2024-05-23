@@ -56,3 +56,31 @@ function openNav() {
 function closeNav() {
   $("#myNav").css("width", "0");
 }
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all buttons with the specific link
+  const appStoreButtons = document.querySelectorAll("a[href='#download-appstore']");
+  const modal = document.getElementById("popupModal");
+  const closePopupButton = document.getElementById("closePopup");
+
+  // Attach click event to all buttons
+  appStoreButtons.forEach(function(button) {
+    button.addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent immediate navigation
+      modal.style.display = "block";
+    });
+  });
+
+  // Close the modal on button click
+  closePopupButton.addEventListener("click", function () {
+    modal.style.display = "none";
+    window.location.href = "https://apps.apple.com/us/app/puff-tracker/id6482973435";
+  });
+
+  // Close the modal if the user clicks outside of it
+  window.addEventListener("click", function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      window.location.href = "https://apps.apple.com/us/app/puff-tracker/id6482973435";
+    }
+  });
+});

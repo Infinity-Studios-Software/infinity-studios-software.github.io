@@ -116,21 +116,18 @@
 
               <div class="download-buttons">
                 <a
-                  href="https://apps.apple.com/us/app/puff-tracker/id6482973435"
-                  class="download-btn"
-                >
-                  <img
-                    src="images/appstore.png"
-                    alt="Download from App Store"
-                  />
-                </a>
-                <a
                   href="https://play.google.com/store/apps/details?id=com.infinitystudios.pufftracker"
                   class="download-btn"
                 >
                   <img
                     src="images/playstore.png"
                     alt="Download from Google Play"
+                  />
+                </a>
+                <a href="#download-appstore" class="download-btn download-appstore">
+                  <img
+                    src="images/appstore.png"
+                    alt="Download from App Store"
                   />
                 </a>
               </div>
@@ -417,6 +414,7 @@
     End: Subscribe Section -->
 
     <!-- Download The App Section -->
+    <!-- Download The App Section -->
     <section id="download">
       <div class="row">
         <img class="app-logo" src="images/app_logo.png" alt="" />
@@ -426,14 +424,14 @@
         <p class="subtext">Join the community and get connected!</p>
 
         <div class="download-buttons">
-          <a href="#download-appstore" class="download-btn">
-            <img src="images/appstore.png" alt="Download from App Store" />
-          </a>
           <a
             href="https://play.google.com/store/apps/details?id=com.infinitystudios.pufftracker"
             class="download-btn"
           >
             <img src="images/playstore.png" alt="Download from Google Play" />
+          </a>
+          <a href="#download-appstore" class="download-btn download-appstore">
+            <img src="images/appstore.png" alt="Download from App Store" />
           </a>
         </div>
       </div>
@@ -449,6 +447,17 @@
         >
       </div>
     </section>
+
+    <!-- Popup Modal -->
+    <div id="popupModal" class="modal">
+      <div class="modal-content">
+        <p>
+          Due to iOS & App Store related constraints, some described features
+          might not be available.
+        </p>
+        <button id="closePopup" class="closePopup">OK</button>
+      </div>
+    </div>
 
     <!-- Footer Section -->
     <section id="footer">

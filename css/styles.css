@@ -1656,3 +1656,63 @@ img.inline-icon {
 .subtext {
   font-size: 1.4rem;
 }
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 18% auto; /* 15% from the top and centered */
+  padding: 25px 20px 20px 20px;
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  text-align: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .modal-content {
+    height: fit-content;
+    margin: 85% auto;
+    width: 80% !important; /* Adjust width for tablets and smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 80% !important; /* Adjust width for mobile devices */
+    padding: 20px 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Blue button styles */
+#closePopup {
+  background-color: #007bff; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 24px; /* Some padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Get the element to behave like a block element */
+  font-size: 16px; /* Increase font size */
+  margin: 20px 2px 0px 2px; /* Some margin */
+  cursor: pointer; /* Pointer/hand icon */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#closePopup:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
