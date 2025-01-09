@@ -7,5 +7,10 @@
         "paths": ["*"]
       }
     ]
+  },
+  "webcredentials": {
+    "apps": [
+      "344WPSZ7X5.infinity.studios.pufftracker"   
+    ]
   }
 }
